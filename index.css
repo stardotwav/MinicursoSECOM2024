@@ -1,0 +1,168 @@
+
+/* configurações gerais da página */
+body{
+    margin: 0 auto;
+    padding: 0;
+    color: #000;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+p{
+    font-size: 18px;
+}
+
+h1{
+    font-size: 28px;
+}
+
+/* imagem principal site */
+.imagemprincipal{
+    background-image: url('./imagens/fundo.png');
+    background-size: 100%;
+    height: 420px;
+    margin-bottom: 20px;
+}
+
+/* configuração de conteúdo */
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* configuração dos grid */
+.boxpersonagem, 
+.boxextras{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+/* configuração das imagens nos cards */
+.card1 img{
+    width: 90%;
+    border: 15px solid #f185b3;
+    border-radius: 10px;
+}
+
+.card2 img{
+    width: 90%;
+    border: 15px solid #aedefc;
+    border-radius: 10px;
+}
+
+.card3 img{
+    width: 90%;
+    border: 15px solid #cdc1ff;
+    border-radius: 10px;
+}
+
+/* Configuração Navbar */
+nav{
+    background-color: #aedefc;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 10px;
+    list-style: none;
+    padding: 10px;
+}
+
+nav img{
+    margin-left: 130px;
+}
+
+nav .links{
+    margin-right: 150px;
+}
+
+nav p{
+    margin-left: -700px;
+}
+
+.links a:active,
+.links a:hover {
+    color: #696969;
+    text-shadow: 0px 0px 10px #1573ae;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* Configuração Footer */
+footer{
+    background-color: #aedefc;
+    width: 100%;
+}
+
+footer img{
+    margin: 0 auto;
+    display: block;
+    height: 40px;
+}
+
+
+/* responsividade */
+@media(min-width: 300px) {
+    .boxpersonagem{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 100vw);
+    }
+}
+
+@media(min-width: 700px) {
+    .boxpersonagem{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 55vw);
+    }
+}   
+
+@media(min-width: 1200px) {
+    .boxpersonagem{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 35vw);
+    }
+}
+
+@media(min-width: 300px) {
+    .boxextras{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 100vw);
+    }
+}
+
+@media(min-width: 700px) {
+    .boxextras{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 55vw);
+    }
+}   
+
+@media(min-width: 1200px) {
+    .boxextras{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 35vw);
+    }
+}
